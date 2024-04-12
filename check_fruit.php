@@ -3,10 +3,10 @@ class HarvestedFruit
 {
     public function isHarvestedFruit($state)
     {
-				if ($state) {
-					return true;
-				} else {
-					return false;
-				}
+        if ($state) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
