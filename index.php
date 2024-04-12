@@ -1,46 +1,21 @@
 <?php
 
-// defining the class Fruit
-class Fruit
-{
-    public $name;
-    public $color;
-    public $weight;
+require "check_fruit.php";
+require "fruit.php";
 
-    public function set_name($name)
-    {
-        $this->name = $name;
-    }
+$new_fruit = new Fruit();
+$apple = new Fruit();
+$avocado = new Fruit();
+$watermelon = new Fruit();
 
-		public function get_name() {
-			return $this->name;
-		}
+$new_fruit->set_name("Orange from Cameroon");
+$new_fruit->set_color("Orange is the color of the fruit");
+$new_fruit->set_weight(20);
 
-    public function set_color($color)
-    {
-        $this->color = $color;
-    }
+$state = $apple instanceof Fruit;
 
-		public function get_color() {
-			return $this->color;
-		}
-
-		public function get_weight() {
-			return $this->weight;
-		}
-
-    public function set_weight($weight)
-    {
-        $this->weight = $weight;
-    }
+if($state) {
+    echo "Apple is a fruit";
+} else {
+    echo "Check again!";
 }
-
-$new_name = new Fruit();
-
-$new_name->set_name("Orange from Cameroon");
-$new_name->set_color("Orange is the color of the fruit");
-$new_name->set_weight(20);
-
-echo "<b>Name of fruit: </b>". $new_name->get_name(). "<br>";
-echo "<b>Color of fruit: </b>".$new_name->get_color(). "<br>";
-echo "<b>Weight of fruit: </b>".$new_name->get_weight(). "<br>";
