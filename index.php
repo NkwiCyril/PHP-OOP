@@ -1,7 +1,7 @@
 <?php
 
-require "check_fruit.php";
-require "fruit.php";
+require "fruit/check_fruit.php";
+require "fruit/fruit.php";
 
 $new_fruit = new Fruit();
 $apple = new Fruit();

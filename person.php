@@ -34,7 +34,7 @@ class Person
 
 $cyril = new Person();
 $cyril->name = "Nkwi";
-$cyril->setEmail("nkwi@gmail.com");
+$cyril-> setEmail("nkwi@gmail.com");
 $cyril->setPassword("nkwi123");
 
 echo $cyril->getEmail() . "<br>";

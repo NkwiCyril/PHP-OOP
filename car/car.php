@@ -1,18 +1,17 @@
 <?php
 
+require 'vehicle.php';
 // working with constructors and destructors in php
-class Car
+class Car extends Vehicle
 {
     public $make;
     public $model;
-    public $color;
     public $year;
 
-    public function __construct($make, $model, $color, $year)
+    public function __construct($make, $model, $year)
     {
         $this->make = $make;
         $this->model = $model;
-        $this->color = $color;
         $this->year = $year;
     
     }
@@ -38,13 +37,11 @@ class Car
     {
         echo "Make: {$this->make} <br>";
         echo "Model: {$this->model} <br>";
-        echo "Color: {$this->color} <br>";
         echo "Year: {$this->year} <br><br>";
     }
-}
+} 
 
-
-$carObj = new Car("Tesla", "Model S", "Silver", "2020");
+$carObj = new Car("Tesla", "Model S", "2020");
 $carObj->start();
 $carObj->stop();
 $carObj->renderCarInfo();
